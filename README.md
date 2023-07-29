@@ -1,4 +1,4 @@
-# cylj
+# visual-monitoring-system
 
 ## Project setup
 ```
@@ -21,4 +21,4 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://visual-monitoring-system.vuejs.org/config/).
