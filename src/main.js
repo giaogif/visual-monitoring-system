@@ -1,5 +1,4 @@
 import Vue from 'vue'
-//引入App组件，它是所有组件的父组件
 import App from './App.vue'
 import router from './router'
 import ElementUI from 'element-ui'
@@ -10,6 +9,7 @@ import 'echarts'
 import Cookies from 'js-cookie'
 import VueCookies from 'vue-cookies';
 import request from './utils/request'
+import store from './store'
 
 Vue.component('v-chart', ECharts)
 Vue.prototype.$axios = axios;
@@ -36,5 +36,9 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
   router,
-  render: h => h(App)//把render函数指定的组件渲染到HTML页面中，h是createElement函数
+  render: h => h(App),//把render函数指定的组件渲染到HTML页面中，h是createElement函数
+  store,
+  beforeCreate() {
+    Vue.prototype.$bus = this
+  },
 }).$mount('#app') //等同于el：'#app' 

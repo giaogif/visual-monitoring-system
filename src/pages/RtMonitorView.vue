@@ -158,7 +158,7 @@
 
 
 <script>
-import MapShow from '../map/MapShow.vue';
+import MapShow from './MapShow.vue';
 export default {
   components: { MapShow },
   name:'RtMonitorView',
